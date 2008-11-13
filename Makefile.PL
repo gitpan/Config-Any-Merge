@@ -9,7 +9,7 @@ WriteMakefile
           'VERSION_FROM' => 'lib/Config/Any/Merge.pm',
           'PREREQ_PM' => {
                            'Test::More' => 0,
-                           'Config::Any' => 0
+                           'Config::Any' => '0.15'
                          }
         )
 ;

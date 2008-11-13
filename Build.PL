@@ -11,10 +11,11 @@ my $builder = Module::Build->new(
 		'Test::More' => 0,
 	},
 	requires => {
-		'Config::Any' => 0,
+		'Config::Any' => 0.15,
 	},
 	add_to_cleanup      => [ 'Config-Any-Merge-*' ],
 	create_makefile_pl  => 'traditional',
+	create_readme	    => 1,
 );
 
 $builder->create_build_script();

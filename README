@@ -1,52 +1,36 @@
-Config-Any-Merge
+NAME
+    Config::Any::Merge - Overrinding of configuration variables based on
+    file order
 
-The README is used to introduce the module and provide instructions on
-how to install the module, any machine dependencies it may have (for
-example C compilers and installed libraries) and any other information
-that should be provided before the module is installed.
+VERSION
+    Version 0.03
 
-A README file is required for CPAN modules since CPAN extracts the README
-file from a module distribution so that people browsing the archive
-can use it to get an idea of the module's uses. It is usually a good idea
-to provide version information here so that people can decide whether
-fixes for the module are worth downloading.
+DESCRIPTION
+    Config::Any returns your configuration as a hash of hashes keyed by the
+    name of the configuration file. This module merges these hashes into a
+    single hash. If the "override" paramter is set to 0 in the paramters for
+    "load_files" or "load_stems", configurations files later in the list
+    can't override variables that are already set. The default is to
+    override previous set variables. In all other regards Config::Any::Merge
+    is a strict subclass of Config::Any and inherits all of its functions.
 
+SYNOPSIS
+        use Config::Any::Merge;
 
-INSTALLATION
+        my $cfg = Config::Any->load_files({files => \@filepaths, override => 0, ...  });
 
-To install this module, run the following commands:
+DEPENDENCIES
+    "Config::Any" >= 0.15
 
-	perl Build.PL
-	./Build
-	./Build test
-	./Build install
+SEE ALSO
+    "Config::Any"
 
-SUPPORT AND DOCUMENTATION
+AUTHOR
+    Mario Domgoergen, "<dom at math.uni-bonn.de>"
 
-After installing, you can find documentation for this module with the
-perldoc command.
+LICENSE AND COPYRIGTH
+    Copyright 2008 Mario Domgoergen, all rights reserved.
 
-    perldoc Config::Any::Merge
-
-You can also look for information at:
-
-    RT, CPAN's request tracker
-        http://rt.cpan.org/NoAuth/Bugs.html?Dist=Config-Any-Merge
-
-    AnnoCPAN, Annotated CPAN documentation
-        http://annocpan.org/dist/Config-Any-Merge
-
-    CPAN Ratings
-        http://cpanratings.perl.org/d/Config-Any-Merge
-
-    Search CPAN
-        http://search.cpan.org/dist/Config-Any-Merge
-
-
-COPYRIGHT AND LICENCE
-
-Copyright (C) 2008 Mario Domgoergen
-
-This program is free software; you can redistribute it and/or modify it
-under the same terms as Perl itself.
+    This program is free software; you can redistribute it and/or modify it
+    under the same terms as Perl itself.
 

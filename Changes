@@ -1,5 +1,8 @@
 Revision history for Config-Any-Merge
 
+0.03	2008-11-13
+	Better description string
+
 0.02	2008-11-13
 	Added basic.t
 	Removed finder(), as upstream has solved #40830
