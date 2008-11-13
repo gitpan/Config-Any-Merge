@@ -1,0 +1,21 @@
+---
+name: Config-Any-Merge
+version: 0.02
+author:
+  - 'Mario Domgoergen <dom@math.uni-bonn.de>'
+abstract: Merging configuration variables in a single hash instance
+license: perl
+resources:
+  license: http://dev.perl.org/licenses/
+requires:
+  Config::Any: 0
+build_requires:
+  Test::More: 0
+provides:
+  Config::Any::Merge:
+    file: lib/Config/Any/Merge.pm
+    version: 0.02
+generated_by: Module::Build version 0.3
+meta-spec:
+  url: http://module-build.sourceforge.net/META-spec-v1.2.html
+  version: 1.2
