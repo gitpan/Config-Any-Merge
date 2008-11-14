@@ -1,7 +1,8 @@
 use strict;
 use warnings;
-use Test::More tests => 2;
-use Config::Any::Merge;
+use Test::More tests => 3;
+
+BEGIN { use_ok('Config::Any::Merge') }
 
 my @files = qw{t/conf/test.ini t/conf/test2.ini};
 my @stems = qw{t/conf/test t/conf/test2};

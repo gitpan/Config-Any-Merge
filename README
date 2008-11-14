@@ -20,7 +20,7 @@ SYNOPSIS
         my $cfg = Config::Any->load_files({files => \@filepaths, override => 0, ...  });
 
 DEPENDENCIES
-    "Config::Any" >= 0.15
+    "Config::Any" >= 0.15, "Hash::Merge"
 
 SEE ALSO
     "Config::Any"
@@ -28,7 +28,7 @@ SEE ALSO
 AUTHOR
     Mario Domgoergen, "<dom at math.uni-bonn.de>"
 
-LICENSE AND COPYRIGTH
+LICENSE AND COPYRIGHT
     Copyright 2008 Mario Domgoergen, all rights reserved.
 
     This program is free software; you can redistribute it and/or modify it

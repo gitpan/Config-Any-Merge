@@ -12,6 +12,7 @@ my $builder = Module::Build->new(
 	},
 	requires => {
 		'Config::Any' => 0.15,
+		'Hash::Merge' => 0,
 	},
 	add_to_cleanup      => [ 'Config-Any-Merge-*' ],
 	create_makefile_pl  => 'traditional',

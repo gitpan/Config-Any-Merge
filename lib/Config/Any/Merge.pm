@@ -4,11 +4,13 @@ use warnings;
 use strict;
 use base 'Config::Any';
 
-our $VERSION = '0.03';
+use Hash::Merge qw/merge/;
+
+our $VERSION = '0.04';
 
 sub _load {
 	my($class,$args) = @_;
-	my %config_merged;
+	my $config_merged = {};
 
 	$args->{flatten_to_hash} = 1;
 
@@ -18,24 +20,21 @@ sub _load {
 		delete $args->{override};
 	}
 	
-	my @files;
-
 	if ($override) {
-		@files = @{$args->{files}};
+		Hash::Merge::set_behavior('RIGHT_PRECEDENT');
 	} else {
-		@files = reverse @{$args->{files}};
+		Hash::Merge::set_behavior('LEFT_PRECEDENT');
 	}
-
-	$args->{files} = \@files;
 
 	my $config_any = $class->SUPER::_load($args);
 
-	foreach my $file (@files) {
-		while (my ($key,$val) = each %{$config_any->{$file}}) {
-			$config_merged{$key} = $val;
-		}
+	foreach my $file (@{$args->{files}}) {
+		$config_merged = merge($config_merged, $config_any->{$file});
+		#while (my ($key,$val) = each %{$config_any->{$file}}) {
+			#$config_merged{$key} = $val;
+		#}
 	}
-	return \%config_merged;
+	return $config_merged;
 }
 
 1; # End of Config::Any::Merge
@@ -69,7 +68,7 @@ is a strict subclass of Config::Any and inherits all of its functions.
 
 =head1 DEPENDENCIES
 
-C<Config::Any> >= 0.15
+C<Config::Any> >= 0.15, C<Hash::Merge>
 
 =head1 SEE ALSO
 
@@ -79,7 +78,7 @@ C<Config::Any>
 
 Mario Domgoergen, C<< <dom at math.uni-bonn.de> >>
 
-=head1 LICENSE AND COPYRIGTH
+=head1 LICENSE AND COPYRIGHT
 
 Copyright 2008 Mario Domgoergen, all rights reserved.
 
