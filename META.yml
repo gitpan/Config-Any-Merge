@@ -1,6 +1,6 @@
 ---
 name: Config-Any-Merge
-version: 0.04
+version: 0.05
 author:
   - 'Mario Domgoergen <dom@math.uni-bonn.de>'
 abstract: Overrinding of configuration variables based on file order
@@ -15,7 +15,7 @@ build_requires:
 provides:
   Config::Any::Merge:
     file: lib/Config/Any/Merge.pm
-    version: 0.04
+    version: 0.05
 generated_by: Module::Build version 0.3
 meta-spec:
   url: http://module-build.sourceforge.net/META-spec-v1.2.html
