@@ -6,7 +6,7 @@ use base 'Config::Any';
 
 use Hash::Merge qw/merge/;
 
-our $VERSION = '0.05';
+our $VERSION = '0.06';
 
 sub _load {
 	my($class,$args) = @_;

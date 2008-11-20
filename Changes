@@ -1,5 +1,8 @@
 Revision history for Config-Any-Merge
 
+0.06	2008-11-20
+	Config::Tiny has to be a build dependency
+
 0.05	2008-11-17
 	Forget to include t/conf in distribution
 
