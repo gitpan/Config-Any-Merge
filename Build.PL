@@ -5,7 +5,6 @@ use Module::Build;
 my $builder = Module::Build->new(
 	module_name         => 'Config::Any::Merge',
 	license             => 'perl',
-	dist_version_from   => 'lib/Config/Any/Merge.pm',
 	build_requires => {
 		'Test::More' => 0,
 		'Config::Tiny' => 0,

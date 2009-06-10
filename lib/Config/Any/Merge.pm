@@ -6,7 +6,7 @@ use base 'Config::Any';
 
 use Hash::Merge qw/merge/;
 
-our $VERSION = '0.06';
+our $VERSION = '0.07';
 
 sub _load {
 	my($class,$args) = @_;
@@ -28,11 +28,8 @@ sub _load {
 
 	my $config_any = $class->SUPER::_load($args);
 
-	foreach my $file (@{$args->{files}}) {
+	foreach my $file (grep { $config_any->{$_} } @{$args->{files}}) {
 		$config_merged = merge($config_merged, $config_any->{$file});
-		#while (my ($key,$val) = each %{$config_any->{$file}}) {
-			#$config_merged{$key} = $val;
-		#}
 	}
 	return $config_merged;
 }
@@ -46,7 +43,7 @@ Config::Any::Merge - Overrinding of configuration variables based on file order
 
 =head1 VERSION
 
-Version 0.03
+Version 0.07
 
 =cut
 
@@ -76,7 +73,7 @@ C<Config::Any>
 
 =head1 AUTHOR
 
-Mario Domgoergen, C<< <dom at math.uni-bonn.de> >>
+Mario Domgoergen, C< <dom@math.uni-bonn.de> >
 
 =head1 LICENSE AND COPYRIGHT
 

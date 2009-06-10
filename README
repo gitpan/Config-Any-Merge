@@ -3,7 +3,7 @@ NAME
     file order
 
 VERSION
-    Version 0.03
+    Version 0.07
 
 DESCRIPTION
     Config::Any returns your configuration as a hash of hashes keyed by the
@@ -26,7 +26,7 @@ SEE ALSO
     "Config::Any"
 
 AUTHOR
-    Mario Domgoergen, "<dom at math.uni-bonn.de>"
+    Mario Domgoergen, " <dom@math.uni-bonn.de" >
 
 LICENSE AND COPYRIGHT
     Copyright 2008 Mario Domgoergen, all rights reserved.
