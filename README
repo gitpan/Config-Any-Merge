@@ -17,7 +17,7 @@ DESCRIPTION
 SYNOPSIS
         use Config::Any::Merge;
 
-        my $cfg = Config::Any->load_files({files => \@filepaths, override => 0, ...  });
+        my $cfg = Config::Any::Merge->load_files({files => \@filepaths, override => 0, ...  });
 
 DEPENDENCIES
     "Config::Any" >= 0.15, "Hash::Merge"

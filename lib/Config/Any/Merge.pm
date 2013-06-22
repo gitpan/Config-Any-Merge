@@ -6,7 +6,7 @@ use base 'Config::Any';
 
 use Hash::Merge qw/merge/;
 
-our $VERSION = '0.07';
+our $VERSION = '0.08';
 
 sub _load {
 	my($class,$args) = @_;
@@ -61,7 +61,7 @@ is a strict subclass of Config::Any and inherits all of its functions.
 
     use Config::Any::Merge;
 
-    my $cfg = Config::Any->load_files({files => \@filepaths, override => 0, ...  });
+    my $cfg = Config::Any::Merge->load_files({files => \@filepaths, override => 0, ...  });
 
 =head1 DEPENDENCIES
 

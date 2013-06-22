@@ -1,23 +1,26 @@
 ---
-name: Config-Any-Merge
-version: 0.07
+abstract: 'Overrinding of configuration variables based on file order'
 author:
   - 'Mario Domgoergen, C< <dom@math.uni-bonn.de> >'
-abstract: Overrinding of configuration variables based on file order
-license: perl
-resources:
-  license: ~
-requires:
-  Config::Any: 0.15
-  Hash::Merge: 0
 build_requires:
   Config::Tiny: 0
   Test::More: 0
+configure_requires:
+  Module::Build: 0.38
+dynamic_config: 1
+generated_by: 'Module::Build version 0.38, CPAN::Meta::Converter version 2.112150'
+license: perl
+meta-spec:
+  url: http://module-build.sourceforge.net/META-spec-v1.4.html
+  version: 1.4
+name: Config-Any-Merge
 provides:
   Config::Any::Merge:
     file: lib/Config/Any/Merge.pm
-    version: 0.07
-generated_by: Module::Build version 0.32
-meta-spec:
-  url: http://module-build.sourceforge.net/META-spec-v1.2.html
-  version: 1.2
+    version: 0.08
+requires:
+  Config::Any: 0.15
+  Hash::Merge: 0
+resources:
+  license: http://dev.perl.org/licenses/
+version: 0.08

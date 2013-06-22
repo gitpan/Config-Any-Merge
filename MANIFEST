@@ -18,3 +18,4 @@ t/conf/test-deep1.ini
 t/conf/test-deep2.ini
 t/conf/test.ini
 t/conf/test2.ini
+META.json

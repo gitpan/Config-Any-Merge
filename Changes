@@ -1,5 +1,9 @@
 Revision history for Config-Any-Merge
 
+0.08	2013/06/22
+
+	- closes #84142: wrong pod example
+
 0.07	2009/06/10
 
 	- closes #46789: missing or bad config files listed in
